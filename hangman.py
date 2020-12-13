@@ -1,4 +1,5 @@
 import random
+from word_list import word_list as wl
 
 #word_list = ['monkey', 'tiger', 'dragon']
 
@@ -12,7 +13,7 @@ def hangman(chosen_word):
     lives = 6
     word_length = len(chosen_word)
 
-    print(f"The word is: {chosen_word}.")
+    print(f"The word is: {chosen_word}")
 
     for _ in range(word_length):
         display += '_'
@@ -40,5 +41,5 @@ def hangman(chosen_word):
             print("Congrats, you won!")
             break
         
-        
-hangman("Marshmellow")
+
+hangman(random.choice(wl))
